@@ -32,7 +32,6 @@ function preload() {
     this.load.image('background1', 'assets/background1.png');
     this.load.image('background2', 'assets/background.png');
     this.load.image('chão', 'assets/chão.png');
-    this.load.image('chão', 'assets/chão.png');
     this.load.spritesheet('NOME', 'assets/NOME.png', { frameWidth: 32, frameHeight: 48 });
 }
 
@@ -47,6 +46,7 @@ function create() {
 
     platforms.create(600, 400, 'chão');
     platforms.create(50, 250, 'chão2');
+    
     player = this.physics.add.sprite(100, 450, 'dude');
 
     player.setBounce(0.2);
