@@ -28,30 +28,29 @@ var scoreText;
 var game = new Phaser.Game(config);
 
 function preload() {
-    this.load.image('sky', 'assets/sky.png');
-    this.load.image('ground', 'assets/platform.png');
-    this.load.image('star', 'assets/star.png');
-    this.load.image('bomb', 'assets/bomb.png');
-    this.load.spritesheet('dude', 'assets/dude.png', { frameWidth: 32, frameHeight: 48 });
+   
+    this.load.image('background1', 'assets/background1.png');
+    this.load.image('background2', 'assets/background.png');
+    this.load.image('chão', 'assets/chão.png');
+    this.load.image('chão', 'assets/chão.png');
+    this.load.spritesheet('NOME', 'assets/NOME.png', { frameWidth: 32, frameHeight: 48 });
 }
 
 function create() {
     
-    this.add.image(400, 300, 'sky');
+    this.add.image(200, 150, 'background1');
+    this.add.image(400, 150, 'background2');
 
     platforms = this.physics.add.staticGroup();
 
-    platforms.create(400, 568, 'ground').setScale(2).refreshBody();
+    platforms.create(400, 568, 'chão').setScale(2).refreshBody();
 
-    platforms.create(600, 400, 'ground');
-    platforms.create(50, 250, 'ground');
-    platforms.create(750, 220, 'ground');
-
+    platforms.create(600, 400, 'chão');
+    platforms.create(50, 250, 'chão2');
     player = this.physics.add.sprite(100, 450, 'dude');
 
     player.setBounce(0.2);
     player.setCollideWorldBounds(true);
-
     this.anims.create({
         key: 'left',
         frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
