@@ -35,7 +35,7 @@ function create() {
 
     platforms.create(312.5, 290, 'chão').refreshBody();
 
-    player = this.physics.add.sprite(190, 32, 'green')
+    player = this.physics.add.sprite(150, 250, 'green')
    
     player.setCollideWorldBounds(true);
     player.setBounce(0.2);
