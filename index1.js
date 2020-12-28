@@ -22,18 +22,18 @@ var player;
 var game = new Phaser.Game(config);
 
 function preload() {
-    this.load.image('background1', 'assets/background1.png');
-    this.load.image('chão', 'assets/chão.png');
+    this.load.image('background1', 'assets/background-preto.jpg');
+    this.load.image('chão', 'assets/floor.png');
     this.load.spritesheet('green', 'assets/green.png', { frameWidth: 29.7 , frameHeight: 50 });
 
 }
 
 function create() {
-    this.add.image(312.5, 210, 'background1');
+    this.add.image(800, 800, 'background1');
 
     platforms = this.physics.add.staticGroup();
 
-    platforms.create(312.5, 290, 'chão').refreshBody();
+    platforms.create(312.5, 290, 'chão').setScale(2).refreshBody();
 
     player = this.physics.add.sprite(150, 250, 'green')
    
@@ -82,6 +82,6 @@ function update() {
         player.anims.play('turn');
     }
     if (cursors.up.isDown && player.body.touching.down) {
-        player.setVelocityY(-200);
+        player.setVelocityY(-230);
     }
 }
