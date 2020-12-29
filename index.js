@@ -29,6 +29,8 @@ var game = new Phaser.Game(config);
 
 function preload() {
     this.load.image('background1', 'assets/background-preto.jpg');
+    this.load.image('background2', 'assets/fundoazul.png');
+    this.load.image('background3', 'assets/fundocinza.png');
     this.load.image('chão', 'assets/floor.png');
     this.load.image('parede', 'assets/wall.png');
     this.load.image('porta', 'assets/porta.png');
@@ -37,6 +39,7 @@ function preload() {
     this.load.image('mesa', 'assets/mesa.png');
     this.load.image('janela2', 'assets/janela2aberta.jpg');
     this.load.image('pombo', 'assets/Pombo destaque.png');
+    this.load.image('vaso', 'assets/vaso-de-flores.png');
     this.load.spritesheet('green', 'assets/green.png', { frameWidth: 29.7, frameHeight: 50 });
     this.load.spritesheet('red', 'assets/red.png', { frameWidth: 29.7, frameHeight: 50 });
 
@@ -44,7 +47,7 @@ function preload() {
 
 function create() {
     //configurações background
-    this.add.image(800, 600, 'background1');
+    this.add.image(450, 300, 'background2');
 
     platforms = this.physics.add.staticGroup();
     platforms.create(400, 600, 'chão').refreshBody();
@@ -56,14 +59,15 @@ function create() {
     
     //objetos da cena
     objects = this.physics.add.staticGroup();
-    objects.create(350, 513, 'porta');
-    objects.create(825, 510, 'porta2');
-    objects.create(370, 180, 'porta2');
-    objects.create(70, 180, 'porta');
-    objects.create(220, 160, 'janela');
-    objects.create(530, 223, 'mesa');
-    objects.create(570, 490, 'janela');
-    objects.create(223, 192, 'pombo');
+    objects.create(350, 538, 'porta');
+    objects.create(825, 536, 'porta2');
+    objects.create(340, 205, 'porta2');
+    objects.create(70, 207, 'porta');
+    objects.create(205, 190, 'janela');
+    objects.create(530, 230, 'mesa');
+    objects.create(560, 520, 'janela');
+    objects.create(206, 215, 'pombo');
+    objects.create(405, 220, 'vaso');
 
     //jogador 1
     player1 = this.physics.add.sprite(150, 560, 'green')
