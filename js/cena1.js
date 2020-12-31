@@ -121,6 +121,23 @@ cena1.create = function () {
     up = this.input.keyboard.addKey("W");
     left = this.input.keyboard.addKey("A");
     right = this.input.keyboard.addKey("D");
+
+    //ativar/desativar tela cheia
+    var button = this.add.image(900, 0, "fullscreen", 0).setOrigin(1, 0).setInteractive().setScrollFactor(0);
+    
+    button.on(
+        "pointerup",
+        function () {
+            if (this.scale.isFullscreen) {
+                button.setFrame(0);
+                this.scale.stopFullscreen();
+            } else {
+                button.setFrame(1);
+                this.scale.startFullscreen();
+            }
+        },
+        this
+    );
 }
 
 cena1.update = function () {
