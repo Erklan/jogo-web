@@ -2,10 +2,8 @@ import { cena1 } from "./cena1.js";
 
 var cena0 = new Phaser.Scene("Cena 0");
 
-var button;
-
 cena0.preload = function () {
-    this.load.image("fundo", "assets/fundoabertura.png");
+    this.load.image("fundo", "assets/fundoazul.png");
     this.load.image("botão", "assets/botao.png");
     this.load.image("nome", "assets/nome.png");
 }
