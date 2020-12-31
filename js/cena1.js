@@ -31,6 +31,9 @@ cena1.preload = function () {
     //jogadores
     this.load.spritesheet('green', 'assets/green.png', { frameWidth: 29.7, frameHeight: 50 });
     this.load.spritesheet('red', 'assets/red.png', { frameWidth: 29.7, frameHeight: 50 });
+
+    //tela cheia
+    this.load.spritesheet('fullscreen', 'assets/fullscreen.png', { frameWidth: 46, frameHeight: 50 });
 }
 
 cena1.create = function () {
