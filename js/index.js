@@ -13,6 +13,13 @@ var config = {
             debug: false
         }
     },
+    scale: {
+        mode: Phaser.Scale.FIT,
+        parent: "game",
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        width: 900,
+        height: 600,
+    },
     scene: [cena0, cena1],
 }
 
