@@ -61,12 +61,12 @@ cena1.create = function () {
     objects.create(405, 220, 'vaso');
 
     //jogador 1
-    player1 = this.physics.add.sprite(150, 560, 'green')
+    player1 = this.physics.add.sprite(825, 360, 'green')
     player1.setCollideWorldBounds(true);
     player1.setBounce(0.1);
 
     //jogador 2
-    player2 = this.physics.add.sprite(825, 360, 'red')
+    player2 = this.physics.add.sprite(150, 560, 'red')
     player2.setCollideWorldBounds(true);
     player2.setBounce(0.1);
 
